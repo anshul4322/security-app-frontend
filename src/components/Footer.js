@@ -2,6 +2,7 @@ import "./Footer.css"
 import { Box } from "@mui/system";
 
 const Footer = () => {
+  //footer
     return (
       <Box className="footer">
         <p className="footer-text">
