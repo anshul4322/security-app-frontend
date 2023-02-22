@@ -1,6 +1,9 @@
 .table-grid{
   width: 1000px;
 }
+.save-button{
+  position: absolute;
+}
 .table-grid-header{
   height: 700px;
   padding: 30px 0px;

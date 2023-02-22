@@ -177,7 +177,7 @@ function Attendence() {
           })}
           <button onClick={(e) => handleAddRows(e)}>Add Rows</button>
           <div>
-            <button type="button" onClick={()=>attendenceData(formValues)}>Save</button>
+            <button type="button" className="save-button" onClick={()=>attendenceData(formValues)}>Save</button>
           </div>
         </form>
         <div>
