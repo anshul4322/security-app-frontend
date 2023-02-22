@@ -1,0 +1,63 @@
+.content {
+  /* background-image: url("../assets/Customer-Data-1.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: Right;
+  align-items: center;
+  height: 70vh;
+}
+
+.form {
+    border-radius: 100px;
+    padding: 110px 10px;
+    min-width: 80%;
+    margin: 2rem;
+    top: 10px;
+}
+img {  
+  max-width: 20%;  
+  height: auto; 
+  padding: 0px 140px;
+} 
+
+.title {
+  color: #005250;
+}
+
+.secondary-action {
+  padding: 1rem 0;
+}
+
+.link {
+  font-weight: 700;
+  text-decoration: none;
+  color: #005250;
+}
+
+.link:focus {
+  color: #005250;
+}
+
+.link:active {
+  color: #005250;
+}
+
+.link:visited {
+  color: #005250;
+}
+
+.button {
+    background-color: #00a278 !important;
+}
+
+.button:hover {
+    background-color: #00845c !important;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    min-width: 24rem;
+  }
+}
