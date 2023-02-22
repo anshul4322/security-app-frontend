@@ -8,7 +8,7 @@ import PointDetail from './components/PointDetail'
 import Attendence from './components/AttendancePage/Attendance';
 
 export const config = {
-  endpoint: `http://localhost:8080/v1/`,
+  endpoint: `https://security-backend.onrender.com/v1/`,
 };
 
 function App() {
