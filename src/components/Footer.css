@@ -1,26 +1,13 @@
 .footer {
-    height: 5vh;
-    background-color: #042C22;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position:absolute;
-    left:0;
-    bottom:0;
-    right:0;
-}
-
-.footer-text {
-    color: #fff;
-    opacity: 0.5;
-    text-align: center;
-    font-weight: 300;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-    .footer-text {
-        width: 40%;
-    }
-}
+    background-color: #042C22;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .footer p {
+    margin: 0;
+  }

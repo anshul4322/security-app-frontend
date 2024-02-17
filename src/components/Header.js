@@ -2,6 +2,7 @@ import { Button, Avatar, Stack } from '@mui/material';
 import './Header.css'
 import { Box } from "@mui/system";
 import { useHistory } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -17,8 +18,24 @@ const Header = () => {
     };
 
     return(
-        <>
-            <div className="topnav">
+        <header className="header" style={{ height: "10vh" }}>
+            <div className="container-fluid">
+                <div className="row align-items-center">
+                    <div className="col-md-3 col-6">
+                        <Link to="/" className="logo-link">
+                            <img src='SS_logo.jpeg' alt="Logo" className="logo" />
+                        </Link>
+                    </div>
+                    <div className="col-md-6 col-6 text-center">
+                        <h1 className="heading">S S Security Services</h1>
+                    </div>
+                    <div className="col-md-3 d-md-block d-none text-end">
+                        <button className="btn btn-danger" onClick={logout}>Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+            /* <div className="topnav">
             <a className="active" href="#home">Home</a>
             <a href="#news">Assigned Task</a>
             <a href="#contact">My profile</a>
@@ -32,8 +49,7 @@ const Header = () => {
                 style={{backgroundColor: "#ff0000",padding: "5px 5px",fontSize: "15px", float:"right"}} 
                 variant="contained" >
             Logout</Button>
-            </div>
-        </>
+            </div> */
     )
 }
     

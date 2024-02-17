@@ -6,12 +6,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { SnackbarProvider } from "notistack";
 import {ThemeProvider} from "@mui/system";
-import theme from "./theme"
-import {BrowserRouter as Router} from "react-router-dom"
+import theme from "./theme";
+import {BrowserRouter as Router} from "react-router-dom";
+import { Provider } from 'react-redux';
+import store from './store'
+
+store.subscribe(()=>console.log(store.getState()))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
+  <Provider store={store}>
   <Router>
   <React.StrictMode>
     <ThemeProvider theme={theme}>
@@ -28,6 +33,7 @@ root.render(
       </ThemeProvider>
   </React.StrictMode>
   </Router>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

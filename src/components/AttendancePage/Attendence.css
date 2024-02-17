@@ -1,91 +1,45 @@
-.table-grid{
-  width: 1000px;
+.button-grid {
+  display: flex;
+  gap: 10px;
+  padding-left: 190px;
 }
-.save-button{
-  position: absolute;
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Display buttons in a grid with 7 columns */
+  gap: 2px; /* Gap between buttons */
 }
-.table-grid-header{
-  height: 700px;
-  padding: 30px 0px;
-  position:absolute
-}
-.border-box {
-  position: absolute;
-  left: 1vw;
-  right: 1vw;
-  height: 250px;
-  padding: 20px;
-  /* border: 1px solid rgb(0, 0, 0); */
-}
-.header-name{
-    display: flex;
-}
-.select-button{
-    
-}
-.header-rows {
+
+.keyboard button {
   padding: 5px;
-  border:3px solid #005250;
-  margin: 22px auto;
-  display: flex;
+  width: 2vw;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
 }
-.req {
-  color: red;
-}
-.error-msg {
-  color: red;
-}
-.form-fields-class {
-  margin-top: 2%;
-  margin-bottom: 2%;
-  display: flex;
-  flex-direction: column;
+.lab label {
+  border: 1px solid #ccc;
   padding: 5px;
-  border:3px solid #005250;
-  margin: 22px auto;
+  width: 2vw;
+  margin-top: 20px;
 }
 
-.form-header {
-  font-size: larger;
-  margin-top: -1%;
-  margin-bottom: -0%;
+.keyboard button:hover {
+  background-color: #f0f0f0;
 }
 
-input,
-label,
-select {
-  display: block;
-  width: 22vw;
+.calendar-day {
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 
-select {
-  width: 22.7vw;
-  padding: 2px;
+.calendar-day-label {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
 }
 
-button {
-  float: right;
-  margin-right: 115px;
-}
 
-.fieldsRows {
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: space-around;
-}
-.fieldRowsGender {
-  padding-left: 160px;
-  display: left;
-  margin-bottom: 1rem;
-  justify-content: space-around;
-}
-#carrierName {
-  width: 61vw;
-}
-
-.carrierClass {
-  position: relative;
-  left: 8vw;
-  right: 8vw;
-  margin-bottom: 1rem;
-}
