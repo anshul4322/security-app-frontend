@@ -10,10 +10,11 @@ import theme from "./theme";
 import {BrowserRouter as Router} from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './store'
+import { createRoot } from 'react-dom/client';
 
 store.subscribe(()=>console.log(store.getState()))
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 
 root.render(
   <Provider store={store}>

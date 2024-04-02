@@ -18,13 +18,13 @@ function App() {
     <Switch>
     <div className="App">
       <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/login">
         <Login />
       </Route>
+      <Route exact path="/home">
+        <Home />
+      </Route>
       <Route exact path="/register">
-        <Register />
+        <Login />
       </Route>     
       <Route exact path="/details">
         <EmployeeDetails />

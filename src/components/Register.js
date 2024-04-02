@@ -38,7 +38,7 @@ function Register(){
       });
       if(response.status === 201)
       enqueueSnackbar("Registered successfully", {variant:"success"});
-      history.push("/Login");
+      history.push("/");
     }catch(e){      
       setLoading(false);
       if(e.response && e.response.status === 400){

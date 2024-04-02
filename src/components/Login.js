@@ -31,7 +31,7 @@ const Login = () => {
     if(response.status === 200){
       enqueueSnackbar("Logged in", {variant:"success"})
       persistLogin(response.data.tokens.access.token, response.data.user.email,response.data.user.name);
-      history.push("/");
+      history.push("/home");
     }
     }catch(e){
       setLoading(false);

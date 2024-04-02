@@ -49,7 +49,7 @@ const AddSiteDetail = () => {
         setLoading(false);   
         if(response.status === 201){
           enqueueSnackbar("Data Saved", {variant:"success"})
-          window.location.reload();
+          history.push("/addSiteDetail")
         }
       }catch(e){
         setLoading(false);

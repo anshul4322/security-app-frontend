@@ -56,7 +56,7 @@ function Attendence() {
         setLoading(false);   
         if(response.status === 200){
           enqueueSnackbar("Attendance Marked", {variant:"success"})
-          window.location.reload();
+          history.push("/home");
         }
     }catch(e){
       setLoading(false);

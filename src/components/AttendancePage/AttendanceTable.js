@@ -1,17 +1,8 @@
 import * as React from "react";
-import { DataGrid } from "@mui/x-data-grid";
-import {
-  Backdrop,
-  Button,
-  CircularProgress,
-  Stack,
-  TextField,
-} from "@mui/material";
-import { Box } from "@mui/system";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 import { config } from "../../App";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Attendence.css";
 import Header from "../Header";
@@ -71,7 +62,6 @@ function AttendanceTable() {
   ];
 
   const daysInMonth = () => {
-    const now = new Date();
     return new Date(+headerValues.year, +headerValues.month, 0).getDate();
   };
   // Generate an array of numbers from 1 to the number of days in the month
@@ -147,7 +137,7 @@ function AttendanceTable() {
 
             if (response.status === 204) {
                 enqueueSnackbar("Data Deleted", { variant: "success" });
-                window.location.reload();
+                history.push("/attendanceDetail")
             }
         } catch (e) {
             if (e.response && e.response.status === 400) {

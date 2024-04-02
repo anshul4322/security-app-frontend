@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
-import Footer from "./Footer";
-import { Button, CircularProgress, Stack, TextField } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
 import { useSnackbar } from "notistack";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import {config} from "../App";
 import "./EmployeeDetails.css";
 import { fetchSiteData } from '../actions/index';
@@ -17,6 +16,7 @@ const EmployeeDetails = () => {
     let [loadings, setLoading] = useState(false);
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const { loading, siteData, siteError } = useSelector(state => state);
 
@@ -37,7 +37,6 @@ const EmployeeDetails = () => {
         vacant: "",
     });
 console.log(employeeData)
-    const history = useHistory();
 
     const token = localStorage.getItem("token");
 
@@ -52,7 +51,7 @@ console.log(employeeData)
             setLoading(false);   
             if(response.status === 201){
               enqueueSnackbar("Data Saved", {variant:"success"})
-              window.location.reload();
+              history.push("/details");
             }
         }catch(e){
           setLoading(false);
